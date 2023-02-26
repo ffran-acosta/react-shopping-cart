@@ -1,3 +1,4 @@
-export { default as About } from './About';
-export { default as Home } from './Home';
-export { default as Store } from './Store';
+export * from './About';
+export * from './Home';
+export * from './Store/components';
+export * from './Store';

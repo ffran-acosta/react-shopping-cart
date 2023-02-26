@@ -1,6 +1,8 @@
-import { StoreItem } from "@/components/StoreItem"
+// import { StoreItem } from "@/pages/Store/components/StoreItem"
 import { Col, Row } from "react-bootstrap"
-import storeItems from "../data/items.json"
+import storeItems from "../../data/items.json"
+import { StoreItem } from "./components"
+
 
 const Store = () => {
     return (

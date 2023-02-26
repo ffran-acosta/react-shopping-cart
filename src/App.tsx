@@ -4,6 +4,7 @@ import { Navbar } from "./components"
 import { About, Home, Store } from "./pages"
 
 
+
 function App() {
 
   return (
