@@ -1,14 +1,15 @@
-import { Container } from "react-bootstrap"
-import { Route, Routes } from "react-router-dom"
-import { Navbar } from "./components"
-import { About, Home, Store } from "./pages"
+import { Container } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
+import { Navbar } from "./components";
+import { ShoppingCartProvider } from "./context";
+import { About, Home, Store } from "./pages";
 
 
 
 function App() {
 
   return (
-    <>
+    <ShoppingCartProvider>
       <Navbar />
       <Container className="mb-4"> 
         <Routes>
@@ -17,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </Container>
-    </>
+    </ShoppingCartProvider>
   )
 }
 
