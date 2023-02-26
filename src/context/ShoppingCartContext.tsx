@@ -1,7 +1,6 @@
-
+import { Cart } from "@/components"
 import { CartItem, ShoppingCartContextM, ShoppingCartProps } from "@/models"
 import { createContext, useContext, useState } from "react"
-
 
 const ShoppingCartContext = createContext({} as ShoppingCartContextM)
 
@@ -11,7 +10,15 @@ export const useShoppingCart = () => {
 
 export const ShoppingCartProvider = ( { children }: ShoppingCartProps) => {
 
+    const [isOpen, setIsOpen] = useState(false)
     const [cartItems, setCartItems] = useState<CartItem[]>([])
+
+    const cartquantity = cartItems.reduce(
+        (quantity, item) => item.quantity + quantity, 0
+    )
+
+    const openCart = () => setIsOpen(true)
+    const closeCart = () => setIsOpen(false)
 
     const getItemQuantity = (id: number) => cartItems.find(item => item.id === id)?.quantity || 0
 
@@ -59,9 +66,14 @@ export const ShoppingCartProvider = ( { children }: ShoppingCartProps) => {
                 getItemQuantity, 
                 increaseCartQuantity, 
                 decreaseCartQuantity, 
-                removeFromCart 
+                removeFromCart,
+                openCart,
+                closeCart,
+                cartItems,
+                cartquantity,
         }} >
             {children}
+            <Cart isOpen={isOpen} />
         </ShoppingCartContext.Provider>
     )
 }
