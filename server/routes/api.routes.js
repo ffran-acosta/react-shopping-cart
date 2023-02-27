@@ -7,6 +7,6 @@ const controller = require('../controller/api.controller')
 router.get('/api/products', controller.products)
 
 //RAILWAT DB
-router.get('/api/railway/products', controller.all)
+// router.get('/api/railway/products', controller.all)
 
 module.exports = router
