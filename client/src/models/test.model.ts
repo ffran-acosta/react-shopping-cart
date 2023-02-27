@@ -1,6 +1,6 @@
 export interface ProductTest {
     id: number,
-    title: string,
+    name: string,
     price: number,
-    img: string,
+    imgUrl: string,
 }

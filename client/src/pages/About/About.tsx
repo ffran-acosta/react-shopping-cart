@@ -18,7 +18,7 @@ const About = () => {
         <div>
             {products.map(item => (
                 <p key={item.id}>
-                    {item.title}
+                    {item.name}
                 </p>
             ))}
         </div>
