@@ -8,8 +8,7 @@ import storeItems from "@/data/items.json";
 export const Cart = ({isOpen}: ShoppingCartProps) => {
     const {closeCart, cartItems} = useShoppingCart()
     return (
-        <Offcanvas 
-            
+        <Offcanvas        
             placement='end'
             onHide={closeCart}
             show={isOpen}

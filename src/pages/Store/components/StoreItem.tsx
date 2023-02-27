@@ -5,7 +5,10 @@ import { formatCurrency } from "@/utilities"
 import { Button, Card } from "react-bootstrap"
 
 export const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
+
+    // FUNCTIONALITIES OF THE SHOPPING CART  
     const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart()
+
     const quantity = getItemQuantity(id)
     return (
         <Card className="h-100">
@@ -20,17 +23,20 @@ export const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
                     <span className="fs-3">{name}</span>
                     <span className="fs-3 ms-2">{formatCurrency(price)}</span>
                 </Card.Title>
+                {/* NO ITEMS AT CART */}
                 <div className="mt-auto">
                     {quantity === 0 ? (
                         <Button
                             className="w-100"
-                            onClick={() => increaseCartQuantity(id)} >
+                            onClick={() => increaseCartQuantity(id)}
+                        >
                             + Add To Cart
                         </Button>
+                    // CART WITH ITEMS
                     ) : (<div
                         className="d-flex align-items-center flex-column"
                         style={{ gap: ".5rem" }}
-                    >
+                        >
                         <div
                             className="d-flex align-items-center justify-content-center"
                             style={{ gap: ".5rem" }}
