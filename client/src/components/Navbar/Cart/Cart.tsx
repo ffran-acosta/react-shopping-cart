@@ -1,9 +1,12 @@
 import { useShoppingCart } from "@/context"
-import { ShoppingCartProps } from "@/models"
 import { formatCurrency } from "@/utilities"
 import { Offcanvas, OffcanvasBody, OffcanvasTitle, Stack } from "react-bootstrap"
 import { ShowItem } from "./CartItem"
 import storeItems from "@/data/items.json";
+
+type ShoppingCartProps = {
+    isOpen: boolean
+}
 
 export const Cart = ({isOpen}: ShoppingCartProps) => {
     const {closeCart, cartItems} = useShoppingCart()
