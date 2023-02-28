@@ -4,7 +4,7 @@ import { StoreItemProps } from "@/models"
 import { formatCurrency } from "@/utilities"
 import { Button, Card } from "react-bootstrap"
 
-export const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
+export const StoreItem = ({ id, name, price, imgurl }: StoreItemProps) => {
 
     // FUNCTIONALITIES OF THE SHOPPING CART  
     const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart()
@@ -14,7 +14,7 @@ export const StoreItem = ({ id, name, price, imgUrl }: StoreItemProps) => {
         <Card className="h-100">
             <Card.Img
                 variant="top"
-                src={imgUrl}
+                src={imgurl}
                 height="300px"
                 style={{ objectFit: 'contain' }}
             />
