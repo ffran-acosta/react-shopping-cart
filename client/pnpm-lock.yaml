@@ -17,7 +17,6 @@ specifiers:
   vite: ^4.1.0
 
 dependencies:
-  '@types/node': 18.14.1
   '@types/react-router-dom': 5.3.3
   bootstrap: 5.2.3
   dotenv: 16.0.3
@@ -28,6 +27,7 @@ dependencies:
   react-router-dom: 6.8.1_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
+  '@types/node': 18.14.1
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@vitejs/plugin-react': 3.1.0_vite@4.1.4
@@ -565,6 +565,7 @@ packages:
 
   /@types/node/18.14.1:
     resolution: {integrity: sha512-QH+37Qds3E0eDlReeboBxfHbX9omAcBCXEzswCu6jySP642jiM3cYSIkU/REqwhCUqXdonHFuBfJDiAJxMNhaQ==}
+    dev: true
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
