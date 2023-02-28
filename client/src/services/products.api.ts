@@ -1,5 +1,5 @@
 export const testingService = async () => {
-    const url = "https://react-shopping-cart-server.up.railway.app/api/railway/products"
+    const url = `${process.env.REACT_APP_SERVERURL}`
     const res = await fetch(url)
     return res.json()
 }
